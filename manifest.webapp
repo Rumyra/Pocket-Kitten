@@ -1,0 +1,14 @@
+{
+  "name": "Pocket Kitten",
+  "description": "Calm yourself with a kitten",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Ruth John",
+    "url": "https://github.com/rumyra"
+  },
+  "icons": {
+    "120": "/style/icons/pocket-kitten@2x.png",
+    "60": "/style/icons/pocket-kitten.png"
+  },
+  "orientation": "portrait-primary"
+}

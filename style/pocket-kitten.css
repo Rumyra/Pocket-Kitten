@@ -1,0 +1,77 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Georgia", serif;
+  line-height: 1;
+  overflow: hidden;
+  
+}
+
+section[role="region"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: url(images/document_bg.png);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-image:
+    -moz-linear-gradient(top, rgba(141,186,196,0.5) 30%, rgba(178,220,230,0.5)),
+    url('images/gray_jean.png')
+  ;
+}
+
+header {
+  text-align: center;
+  color: white;
+  padding: 1px 0px;
+  background-image:
+    -moz-linear-gradient(top, rgba(9,64,72,0.7), rgba(0,44,52,0.7)),
+    url('images/classy_fabric.png')
+  ;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 24px;
+  font-style: italic;
+  text-shadow: 2px 2px 2px black;
+}
+
+.show-kitten div {
+  margin: 20px auto;
+  height: 320px;
+  width: 240px;
+  overflow: hidden;
+  position: relative;
+  background:transparent url(images/fetching.gif) no-repeat left top;
+  border-radius: 10px;
+  box-shadow:
+    0px 0px 1px 4px rgba(222,249,255,1),
+    0px 0px 2px 4px rgba(0,0,0,0.5),
+    1px 1px 2px 4px rgba(0,0,0,0.5),
+    inset 0px 0px 2px 2px rgba(0,0,0,0.4)
+  ;
+}
+
+/*box-shadow doesn't render on image, so hacking a covering span*/
+.show-kitten div span {
+  height: 320px;
+  width: 240px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+
+.show-kitten figcaption {
+  font-size: 18px;
+  color:rgba(0,44,52,1);
+  text-shadow: 1px 1px 1px white;
+  margin: 20px 0px;
+  text-align: center;
+}
