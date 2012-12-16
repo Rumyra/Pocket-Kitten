@@ -1,12 +1,12 @@
 #Let's make a Firefox OS app!
 
-It's been the little whispers on the breeze this year, that far off calling, it's niggling at you now… You've heard about Firefox OS (or 'Boot to Ghecko'), you've read about FIrefox OS, but you haven't had a chance to have a play with it yourself. Today I want you to take some time for yourself, away from distractions, put your phone on silent, close your Twitter client, ignore your emails, we're going to see what it's all about.
+It's been the little whispers on the breeze this year, that far off calling, it's niggling at you now… You've heard about Firefox OS (or 'Boot to Ghecko'), you've read about Firefox OS, but you haven't had a chance to have a play with it yourself. Today I want you to take some time for yourself, away from distractions, put your phone on silent, close your Twitter client, ignore your emails, we're going to see what it's all about.
 
 ###But what is it?
 
 An OS! :) One that is completely open source and has been developed using the same rendering engine as Firefox (Ghecko). Which means apps are developed in everyday web technologies: HTML, CSS and Javascript. The big project at the moment is [Gaia](https://github.com/mozilla-b2g/gaia), which is a smart phone OS built on top of the Boot to Ghecko technology, however the scope for other devices is endless - it has already been booted on a [Raspberry Pi](http://www.raspberrypi.org/archives/1787).
 
-In this tutorial I want to take you over the basics of making an app. Wait, what - you already know some/a lot of HTML, CSS and Javascript? Then I hope you're ready to have your mind blown, because that is all you need!
+In this tutorial I want to take you over the basics of making an app. Wait, what? You already know some/a lot of HTML, CSS and Javascript? Then I hope you're ready to have your mind blown, because that is all you need!
 
 [The Gaia operating system](OSpreview.jpg)
 
@@ -18,11 +18,11 @@ Once downloaded and installed you should be looking at something like this:
 
 [Gaia simulator add on](simulator.jpg)
 
-If this tab hasn't opened, you can load it from the menu; Tools -> Web Developer -> Firefox OS Simulator. Go ahead and click on the 'Stopped' link… wait, what's this? Something's happening… Wahay! And we're simulating Firefox OS:
+If this tab hasn't opened, you can load it from the menu; **Tools -> Web Developer -> Firefox OS Simulator**. Go ahead and click on the 'Stopped' link… wait, what's this? Something's happening… Wahay! And we're simulating Firefox OS:
 
 [Preview of Gaia homescreen](OShomescreen.jpg)
 
-Slide the button to the unlock icon and have a look around. Click and hold to slide (or if you prefer keyboard shortcuts: On a Mac fn + rightarrow and fn + leftarrow, or home and end keys on Linux, can help you navigate). There are plenty of apps there already - one of my favourites is 'CrystalSkull', it's shiny :) *gets distracted*… sorry. Must. Stop. Rotating. Skull.
+Slide the button to the unlock icon and have a look around. Click and hold to slide (or if you prefer keyboard shortcuts: On a Mac fn + rightarrow and fn + leftarrow, or home and end keys on Linux, can help you navigate). There are plenty of apps there already - one of my favourites is **CrystalSkull**, it's shiny :) *gets distracted*… sorry. Must. Stop. Rotating. Skull.
 
 It's also worth bearing in mind at this point that Firefox OS and Gaia are still very much in development (as are most of the apps) and you can see on the simulator add-on screen that it's only in 'Alpha', so please bear with any glitches.
 
@@ -30,7 +30,7 @@ It's also worth bearing in mind at this point that Firefox OS and Gaia are still
 
 If we hop back to the add on page in Firefox, we can see there are two options for installing an app in the simulator. You can choose a local file, or you can link to a URL. Here we're going to do the former. So let's start creating some app files.
 
-The app we're going to build here is called 'Pocket Kitten'. It displays a picture of a kitten, and when you tap the device is displays a different picture of a kitten. (Big thanks to [@sammachin](http://www.twitter.com/sammachin) for letting me steal his concept). Begin by creating a folder for your app and inside that create two more folders, one for your css (style) and one for your javascript (js). The first file we need is manifest.webapp, this just sets up some data (and permissions if you're using web APIs), in json format, about our app.
+The app we're going to build here is called **Pocket Kitten**. It displays a picture of a kitten, and when you tap the device is displays a different picture of a kitten. Begin by creating a folder for your app and inside that create two more folders, one for your CSS (_style_) and one for your javascript (_js_). The first file we need is _manifest.webapp_, this just sets up some data (and permissions if you're using web APIs), in json format, about our app.
 
 ~~~
 
@@ -56,9 +56,9 @@ We also need an icon for our app. Well two actually, one double the size of the 
 [Retina display icon](pocket-kitten@2x.png)
 [Non-retina display icon](pocket-kitten.png)
 
-We'll pop them in a style->icons folder, like we specified in the manifest.webapp file.
+We'll pop them in a _style/icons_ folder, like we specified in the _manifest.webapp_ file.
 
-This is going to be a one page app to keep things simple, so let's create our only HTML file (index.html). All we need for this app is the app name as a heading and the image of a kitten.
+This is going to be a one page app to keep things simple, so let's create our only HTML file, _index.html_. All we need for this app is the app name as a heading and the image of a kitten.
 
 ~~~
 
@@ -91,11 +91,11 @@ This is going to be a one page app to keep things simple, so let's create our on
 
 ~~~
 
-We can now open this index.html file in Firefox Nightly and we can develop Pocket Kitten in the browser for the next bit. If we set the view to be the same dimensions as the simulator, we can see what the app will look like as we add CSS. Go to Tools->WebDeveloper->Responsive Design View and choose 320x480 from the drop down that appears.
+We can now open _index.html_ in Firefox Nightly and we can develop Pocket Kitten in the browser for the next bit. If we set the view to be the same dimensions as the simulator, we can see what the app will look like as we add CSS. Go to **Tools -> WebDeveloper -> Responsive Design View** and choose 320x480 from the drop down that appears.
 
-So let's get cracking with a little CSS. I'm going to create a custom design, which is always advised with FirefoxOS apps. There has been a pattern library, [Gaia building blocks](https://wiki.mozilla.org/Gaia/Design/BuildingBlocks), created for Gaia develpment, but part of the point about harnessing the 'Open Web' is we can have any app look any which way we want... yay!
+So let's get cracking with a little CSS. I'm going to create a custom design, which is always advised with FirefoxOS apps. There has been a pattern library, [Gaia building blocks](https://wiki.mozilla.org/Gaia/Design/BuildingBlocks), created for Gaia develpment, but part of the point about harnessing open web technologies is we can have any app look any which way we want... yay!
 
-As it's such a small example, I have only one CSS file (style/pocket-kitten.css):
+As it's such a small example, I have only one CSS file _style/pocket-kitten.css_:
 
 ~~~
 
@@ -179,17 +179,17 @@ h1 {
 
 ~~~
 
-As you may have noticed there are 3 background images in the CSS file, two are just background textures, whilst the other is a placeholder for the kitten image. Once you've dropped those in to style/images you can refresh Pocket Kitten in the browser and see what it looks like.
+As you may have noticed there are 3 background images in the CSS file, two are just background textures, whilst the other is a placeholder for the kitten image. Once you've dropped those in to _style/images_ you can refresh Pocket Kitten in the browser and see what it looks like.
 
 [Fabric texture](classy_fabric.png)
 [Jean texture](gray_jean.png)
 [Placeholder/loading gif](fetching.gif)
 
-Now let's take a sneaky peak at what it looks like in the simulator. Go back to the simulator add on tab and click on 'Running' to stop the simulator. Click on the 'Add Directory' button, browse to the Place Kitten folder and select the manifest.webapp file. Click open and our Pocket Kitten app will be added to the screen. Now start the simulator again and there should now be a 'Pocket Kitten' app with our icon. Tap it to open and our app should now be running!
+Now let's take a sneaky peak at what it looks like in the simulator. Go back to the simulator add on tab and click on 'Running' to stop the simulator. Click on the 'Add Directory' button, browse to the Place Kitten folder and select the _manifest.webapp_ file. Click open and our Pocket Kitten app will be added to the screen. Now start the simulator again and there should now be a 'Pocket Kitten' app with our icon. Tap it to open and our app should now be running!
 
 [Pocket kitten running in simulator](appFirstLook.jpg)
 
-All we need now is a little tapping action so the picture changes. Let's create a javascript file: pocket-kitten.js and save it in our js folder. I'm going to use an external web service - [placekitten.com](http://placekitten.com/), which serves different kitten images depending on parameters set in the url. This does however mean that the user will need a data connection for the app to work, so user feedback will be necessary should they not be connected.
+All we need now is a little tapping action so the picture changes. Let's create a javascript file: _pocket-kitten.js_ and save it in our js folder. I'm going to use an external web service - [placekitten.com](http://placekitten.com/), which serves different kitten images depending on parameters set in the url. This does however mean that the user will need a data connection for the app to work, so user feedback will be necessary should they not be connected.
 
 Let's start by showing an alert if the user is not connected:
 
@@ -240,7 +240,7 @@ Now turn around and pat yourself on the back - you just made an app which runs o
 
 Did you notice what just happened there - you actually just built a web app, it just so happens that that really is all you need to do. Amazedev! As it is just web technology it's worth taking a look at the [WebAPI list](https://wiki.mozilla.org/WebAPI/) to see all the amazing functionality which is/will be available for your apps.
 
-Now I bet you're wondering how you get all this onto a device. I'm not going to go into it in detail here, no doubt it'll be tl;dr. A quick summary is you need the [Android SDK](http://developer.android.com/sdk/index.html) installed and the [Gaia code](https://github.com/mozilla-b2g/gaia). Also a compatible device (Galaxy S2, Galaxy Nexus, Nexus One, LG Optimus to name a few). There are [instructions here](https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device) and more notes on it [here](http://hackingfirefoxos.wordpress.com/). There'll soon be more detail from me too, so keep an eye out.
+Now I bet you're wondering how you get all this onto a device. Sorry I'm not going to go into it in detail here, no doubt it'll be tl;dr. A quick summary is you need the [Android SDK](http://developer.android.com/sdk/index.html) installed and the [Gaia code](https://github.com/mozilla-b2g/gaia). Also a compatible device (Galaxy S2, Galaxy Nexus, Nexus One, LG Optimus to name a few). There are [instructions here](https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device) and more notes on it [here](http://hackingfirefoxos.wordpress.com/). There'll soon be more detail from me too, so keep an eye out.
 
 
 ###Any more for any more?
@@ -251,6 +251,6 @@ If you want to keep up to date with news and how development is going, you can [
 
 Go forth my friends, with your knew knowledge and make some awesome apps :)
 
-NB I did actually make Pocket Kitten(!) - you can see it in it's [full glory here]().
+NB I did actually make Pocket Kitten(!) - you can see it in it's [full glory here](http://rumyra.github.com/Pocket-Kitten/index.html).
 
 
