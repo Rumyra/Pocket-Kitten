@@ -7,8 +7,8 @@
     "url": "https://github.com/rumyra"
   },
   "icons": {
-    "120": "/style/icons/pocket-kitten@2x.png",
-    "60": "/style/icons/pocket-kitten.png"
+    "128": "/style/icons/pocket-kitten@2x.png",
+    "64": "/style/icons/pocket-kitten.png"
   },
   "orientation": "portrait-primary"
 }
