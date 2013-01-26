@@ -63,9 +63,10 @@ function Install() {
     request.onsuccess = function () {
       if (!this.result) {
         that.triggerChange("uninstalled");
-        that.installUrl = (
-          location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp"
-          );
+        that.installUrl = 'http://rumyra.github.com/Pocket-Kitten/manifest.webapp';
+        // that.installUrl = (
+        //   location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp"
+        //   );
         that.doIt = function() {
           try {
             var req2 = navigator.mozApps.install(that.installUrl);
