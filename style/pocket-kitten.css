@@ -200,6 +200,9 @@ header button:hover, header button:active {
   -ms-transform:rotate(45deg);
   transform:rotate(45deg);
 }
+@media all and (max-width: 500px) {
+  .github-ribbon {display:none;}
+  }
 
 .github-ribbon:hover {
   box-shadow: 0px 0px 0px 4px rgba(55,55,55,1),
