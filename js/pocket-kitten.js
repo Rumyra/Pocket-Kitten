@@ -26,6 +26,9 @@ setImage();
 document.body.addEventListener('click', function onKittenSmashed(evt) {
   setImage();
 });
+document.body.addEventListener('touchstart', function onKittenSmashed(evt) {
+  setImage();
+});
 
 //do install button shizzle~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function Install() {
