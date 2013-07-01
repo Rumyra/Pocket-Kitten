@@ -28,7 +28,7 @@ function setImage(lightValue) {
   //set new image source
   domElement.src = sourceUrl;
 
-  navigator.vibrate(200);
+  navigator.vibrate([0,300,200]);
 }
 
 //run once on app load
