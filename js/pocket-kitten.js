@@ -25,9 +25,11 @@ setImage();
 //run when clicked/tapped
 document.body.addEventListener('click', function onKittenSmashed(evt) {
   setImage();
+  navigator.vibrate(200);
 });
 document.body.addEventListener('touchstart', function onKittenSmashed(evt) {
   setImage();
+  navigator.vibrate(200);
 });
 
 //do install button shizzle~~~~~~~~~~~~~~~~~~~~~~~~~~~
