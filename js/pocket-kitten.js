@@ -18,7 +18,7 @@ function setImage(lightValue) {
   var urlOrigin = 'http://placekitten.com/';
   if (lightValue < 50) {
     urlOrigin = 'http://placepuppy.it/';
-  } 
+  }
   //get value between 240 and 440 for the width
   var imageWidth = Math.floor(Math.random() * (200 + 1)) + 240;
   //get value between 320 and 520 for the height
