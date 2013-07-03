@@ -3,11 +3,15 @@ if (navigator.onLine == false) {
   alert('Oh nos! It seems you\'re not online :(\nSorry but this app only works if you are online, please connect and try again.');
 }
 
+//add below, 2) add light value to function 3) add urlOrigin var and if 4) call lightValue when calling functions
+//All very well and good but I did promise some vibration so...
+//HERE----------------------------------------
 var lightValue;
 
 window.addEventListener('devicelight', function(event) {
   lightValue = event.value;
 });
+//-----------------------------------------------
 
 //creates url and loads image~~~~~~~~~~~~~~~~~~~~~~
 function setImage(lightValue) {
@@ -28,7 +32,9 @@ function setImage(lightValue) {
   //set new image source
   domElement.src = sourceUrl;
 
+//HERE FIRST--------------------------------
   navigator.vibrate([0,300,200]);
+//-------------------------------------------
 }
 
 //run once on app load
