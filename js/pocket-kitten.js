@@ -1,9 +1,17 @@
+//TODO MEOW WHEN IDLE
+//TODO COMIC ANTO HEROES @ NIGHT
+//TODO SHAKE CHANGE PICTURE
+
 //user feedback if device is not online
+//CHECK WORKS IN BROWSERS
+//TODO CACHING
 if (navigator.onLine == false) {
   alert('Oh nos! It seems you\'re not online :(\nSorry but this app only works if you are online, please connect and try again.');
 }
 
-//add below, 2) add light value to function 3) add urlOrigin var and if 4) call lightValue when calling functions
+//ONLINE
+//VIBRATION
+//add below, 2) add light value to function 4) if call lightValue
 //All very well and good but I did promise some vibration so...
 //HERE----------------------------------------
 var lightValue;
@@ -13,11 +21,12 @@ window.addEventListener('devicelight', function(event) {
 });
 //-----------------------------------------------
 
+//TODO MAKE IMAGE RESPONSIVE
 //creates url and loads image~~~~~~~~~~~~~~~~~~~~~~
 function setImage(lightValue) {
-  var urlOrigin = 'http://placekitten.com/';
+  var urlOrigin = 'http://placekitten.com/'; //kittenUrl
   if (lightValue < 50) {
-    urlOrigin = 'http://placepuppy.it/';
+    urlOrigin = 'http://placedog.com/'; //puppyUrl
   }
   //get value between 240 and 440 for the width
   var imageWidth = Math.floor(Math.random() * (200 + 1)) + 240;
@@ -32,8 +41,11 @@ function setImage(lightValue) {
   //set new image source
   domElement.src = sourceUrl;
 
+//TODO ON IMAGE SHOW
 //HERE FIRST--------------------------------
-  navigator.vibrate([0,300,200]);
+  if (navigator.vibrate) {
+    navigator.vibrate([0,300,200]);
+  }
 //-------------------------------------------
 }
 
@@ -47,6 +59,8 @@ document.body.addEventListener('touchstart', function onKittenSmashed(evt) {
   setImage(lightValue);
 });
 
+
+//TODO TEST INSTALL
 //do install button shizzle~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function Install() {
   this.state = "idle";
