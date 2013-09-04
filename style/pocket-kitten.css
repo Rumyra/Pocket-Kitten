@@ -164,6 +164,21 @@ header button:hover, header button:active {
   box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.4);
   border-radius: 10px;
 }
+#loader {
+  position: absolute;
+  top: -200px;
+  left: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: red;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  transition: 0.5s;
+}
+#loader.loading {
+  top: 0px;
+}
 
 .show-kitten figcaption {
   font-size: 18px;
