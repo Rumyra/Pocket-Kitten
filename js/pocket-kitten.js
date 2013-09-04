@@ -5,10 +5,11 @@
 //user feedback if device is not online
 //CHECK WORKS IN BROWSERS
 //TODO CACHING
-if (navigator.onLine == false) {
+if (navigator.onLine === false) {
   alert('Oh nos! It seems you\'re not online :(\nSorry but this app only works if you are online, please connect and try again.');
 }
 
+var bufferImg = document.createElement('img');
 
 var lightValue;
 
@@ -29,11 +30,18 @@ function setImage(lightValue) {
 
   //Create image source url
   var sourceUrl = urlOrigin+imageWidth+'/'+imageHeight;
-  //ge image element
-  var domElement = document.getElementById("kitten-image"); 
+  //get image element
+  var domElement = document.getElementById("kitten-image");
+  var loader = document.getElementById("loader");
+
+  bufferImg.src = sourceUrl;
+  loader.className = 'loading';
 
   //set new image source
-  domElement.src = sourceUrl;
+  bufferImg.onload = function() {
+    loader.className = '';
+    domElement.src = sourceUrl;
+  }
 
 //TODO ON IMAGE SHOW
 //HERE FIRST--------------------------------
