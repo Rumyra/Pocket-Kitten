@@ -9,19 +9,13 @@ if (navigator.onLine == false) {
   alert('Oh nos! It seems you\'re not online :(\nSorry but this app only works if you are online, please connect and try again.');
 }
 
-//ONLINE
-//VIBRATION
-//add below, 2) add light value to function 4) if call lightValue
-//All very well and good but I did promise some vibration so...
-//HERE----------------------------------------
+
 var lightValue;
 
 window.addEventListener('devicelight', function(event) {
   lightValue = event.value;
 });
-//-----------------------------------------------
 
-//TODO MAKE IMAGE RESPONSIVE
 //creates url and loads image~~~~~~~~~~~~~~~~~~~~~~
 function setImage(lightValue) {
   var urlOrigin = 'http://placekitten.com/'; //kittenUrl
@@ -43,9 +37,13 @@ function setImage(lightValue) {
 
 //TODO ON IMAGE SHOW
 //HERE FIRST--------------------------------
+
+
   if (navigator.vibrate) {
     navigator.vibrate([0,300,200]);
   }
+
+
 //-------------------------------------------
 }
 
