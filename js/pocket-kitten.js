@@ -1,35 +1,72 @@
+//TODO MEOW WHEN IDLE
+//TODO COMIC ANTO HEROES @ NIGHT
+//TODO SHAKE CHANGE PICTURE
+
 //user feedback if device is not online
-if (navigator.onLine == false) {
+//CHECK WORKS IN BROWSERS
+//TODO CACHING
+if (navigator.onLine === false) {
   alert('Oh nos! It seems you\'re not online :(\nSorry but this app only works if you are online, please connect and try again.');
 }
 
+var bufferImg = document.createElement('img');
+
+var lightValue;
+
+window.addEventListener('devicelight', function(event) {
+  lightValue = event.value;
+});
 
 //creates url and loads image~~~~~~~~~~~~~~~~~~~~~~
-function setImage() {
+function setImage(lightValue) {
+  var urlOrigin = 'http://placekitten.com/'; //kittenUrl
+  if (lightValue < 50) {
+    urlOrigin = 'http://placedog.com/'; //puppyUrl
+  }
   //get value between 240 and 440 for the width
   var imageWidth = Math.floor(Math.random() * (200 + 1)) + 240;
   //get value between 320 and 520 for the height
   var imageHeight = Math.floor(Math.random() * (200 + 1)) + 320;
 
   //Create image source url
-  var sourceUrl = 'http://placekitten.com/'+imageWidth+'/'+imageHeight;
-  //ge image element
-  var domElement = document.getElementById("kitten-image"); 
+  var sourceUrl = urlOrigin+imageWidth+'/'+imageHeight;
+  //get image element
+  var domElement = document.getElementById("kitten-image");
+  var loader = document.getElementById("loader");
+
+  bufferImg.src = sourceUrl;
+  loader.className = 'loading';
 
   //set new image source
-  domElement.src = sourceUrl;
+  bufferImg.onload = function() {
+    loader.className = '';
+    domElement.src = sourceUrl;
+  }
+
+//TODO ON IMAGE SHOW
+//HERE FIRST--------------------------------
+
+
+  if (navigator.vibrate) {
+    navigator.vibrate([0,300,200]);
+  }
+
+
+//-------------------------------------------
 }
 
 //run once on app load
 setImage();
 //run when clicked/tapped
 document.body.addEventListener('click', function onKittenSmashed(evt) {
-  setImage();
+  setImage(lightValue);
 });
 document.body.addEventListener('touchstart', function onKittenSmashed(evt) {
-  setImage();
+  setImage(lightValue);
 });
 
+
+//TODO TEST INSTALL
 //do install button shizzle~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function Install() {
   this.state = "idle";
