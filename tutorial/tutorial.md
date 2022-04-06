@@ -10,7 +10,7 @@ An OS! :) One that is completely open source and has been developed using the sa
 
 In this tutorial I want to take you over the basics of making an app. Wait, what? You already know some/a lot of HTML, CSS and Javascript? Then I hope you're ready to have your mind blown, because that is all you need!
 
-<p align="center"><img src="OSpreview.jpg"></p><p align="center">The Gaia operating system</p>
+<p align="center"><img src="images/OSpreview.jpg"></p><p align="center">The Gaia operating system</p>
 
 ///////EDIT 'Geeksphone'
 ### I don't have a Firefox smartphone :( can I run it?
@@ -21,11 +21,11 @@ You sure can. The easiest way to do this is to simulate it on your computer. Fir
 
 Once downloaded and installed you should be looking at something like this:
 
-[Gaia simulator add on](simulator.jpg)
+<p align="center"><img src="images/simulator.jpg"></p><p align="center">Gaia simulator add on</p>
 
 If this tab hasn't opened, you can load it from the menu; **Tools -> Web Developer -> Firefox OS Simulator**. Go ahead and click on the 'Stopped' link… wait, what's this? Something's happening… Wahay! And we're simulating Firefox OS:
 
-[Preview of Gaia homescreen](OShomescreen.jpg)
+<p align="center"><img src="images/OShomescreen.jpg"></p><p align="center">Preview of Gaia homescreen</p>
 
 Slide the button to the unlock icon and have a look around. Click and hold to slide (or if you prefer keyboard shortcuts: On a Mac fn + rightarrow and fn + leftarrow, or home and end keys on Linux, can help you navigate). There are plenty of apps there already - one of my favourites is **CrystalSkull**, it's shiny :) *gets distracted*… sorry. Must. Stop. Rotating. Skull.
 
@@ -58,8 +58,8 @@ The app we're going to build here is called **Pocket Kitten**. It displays a pic
 
 We also need an icon for our app. Well two actually, one double the size of the other for retina displays.
 
-[Retina display icon](pocket-kitten@2x.png)
-[Non-retina display icon](pocket-kitten.png)
+<p align="center"><img src="images/pocket-kitten@2x.png"></p><p align="center">Retina display icon</p>
+<p align="center"><img src="images/pocket-kitten.png"></p><p align="center">Non-retina display icon</p>
 
 We'll pop them in a _style/icons_ folder, like we specified in the _manifest.webapp_ file.
 
@@ -189,13 +189,13 @@ h1 {
 
 As you may have noticed there are 3 background images in the CSS file, two are just background textures, whilst the other is a placeholder for the kitten image. Once you've dropped those in to _style/images_ you can refresh Pocket Kitten in the browser and see what it looks like.
 
-[Fabric texture](classy_fabric.png)
-[Jean texture](gray_jean.png)
-[Placeholder/loading gif](fetching.gif)
+<p align="center"><img src="images/classy_fabric.png"></p><p align="center">Fabric texture</p>
+<p align="center"><img src="images/gray_jean.png"></p><p align="center">Jean texture</p>
+<p align="center"><img src="images/fetching.gif"></p><p align="center">Placeholder/loading gif</p>
 
 Now let's take a sneaky peak at what it looks like in the simulator. Go back to the simulator add on tab and click on 'Running' to stop the simulator. Click on the 'Add Directory' button, browse to the Place Kitten folder and select the _manifest.webapp_ file. Click open and our Pocket Kitten app will be added to the screen. Now start the simulator again and there should now be a 'Pocket Kitten' app with our icon. Tap it to open and our app should now be running!
 
-[Pocket kitten running in simulator](appFirstLook.jpg)
+<p align="center"><img src="images/appFirstLook.jpg"></p><p align="center">Pocket kitten running in simulator</p>
 
 All we need now is a little tapping action so the picture changes. Let's create a javascript file: _pocket-kitten.js_ and save it in our js folder. I'm going to use an external web service - [placekitten.com](http://placekitten.com/), which serves different kitten images depending on parameters set in the url. This does however mean that the user will need a data connection for the app to work, so user feedback will be necessary should they not be connected.
 
@@ -242,7 +242,7 @@ document.body.addEventListener('click', function onKittenSmashed(evt) {
 
 Add this to your javascript file, save it and go back to the simulator add on. Click on 'Update' button next to the Pocket Kitten app. The simulator should restart and the app load automatically. Now if you click the screen a new kitten picture should load!
 
-[Pocket Kitten showing a kitten](fullApp.jpg)
+<p align="center"><img src="images/fullApp.jpg"></p><p align="center">Pocket Kitten showing a kitten</p>
 
 Now turn around and pat yourself on the back - you just made an app which runs on Firefox OS :D
 
