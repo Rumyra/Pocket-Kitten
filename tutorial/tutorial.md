@@ -1,8 +1,8 @@
-#Let's make a Firefox OS app!
+# Let's make a Firefox OS app!
 
 It's been the little whispers on the breeze this year, that far off calling, it's niggling at you now… You've heard about Firefox OS (or 'Boot to Ghecko'), you've read about Firefox OS, but you haven't had a chance to have a play with it yourself. Today I want you to take some time for yourself, away from distractions, put your phone on silent, close your Twitter client, ignore your emails, we're going to see what it's all about.
 
-###But what is it?
+### But what is it?
 
 An OS! :) One that is completely open source and has been developed using the same rendering engine as Firefox (Ghecko). Which means apps are developed in everyday web technologies: HTML, CSS and Javascript. The big project at the moment is [Gaia](https://github.com/mozilla-b2g/gaia), which is a smart phone OS built on top of the Boot to Ghecko technology.
 
@@ -13,7 +13,7 @@ In this tutorial I want to take you over the basics of making an app. Wait, what
 [The Gaia operating system](OSpreview.jpg)
 
 ///////EDIT 'Geeksphone'
-###I don't have a Firefox smartphone :( can I run it?
+### I don't have a Firefox smartphone :( can I run it?
 
 You sure can. The easiest way to do this is to simulate it on your computer. Firstly make sure you have [Firefox nightly](http://nightly.mozilla.org/) downloaded and installed, then grab the [simulator add on here](http://people.mozilla.org/~myk/r2d2b2g/) and click on the install link for your relative platform.
 
@@ -31,7 +31,7 @@ Slide the button to the unlock icon and have a look around. Click and hold to sl
 
 It's also worth bearing in mind at this point that Firefox OS and Gaia are still very much in development (as are most of the apps) and you can see on the simulator add-on screen that it's only in 'Alpha', so please bear with any glitches.
 
-###So let's roll!
+### So let's roll!
 
 If we hop back to the add on page in Firefox, we can see there are two options for installing an app in the simulator. You can choose a local file, or you can link to a URL. Here we're going to do the former. So let's start creating some app files.
 
@@ -252,7 +252,7 @@ Now I bet you're wondering how you get all this onto a device. Sorry I'm not goi
 ////////////EDIT Or now you can just go order a Geeksphone :)
 
 
-###Any more for any more?
+### Any more for any more?
 
 This was a super simple introduction to Firefox OS, just to get your juices flowing. There's loads more to discover like [reading more about it](http://mozilla.org/b2g) and digging around with [native apps on Gaia](https://github.com/mozilla-b2g/gaia/tree/master/apps).
 
