@@ -1,6 +1,8 @@
 Pocket-Kitten
 =============
 
-A simple Firefox OS app for Gaia
+A simple Firefox OS app
 
-[View it in action here](http://rumyra.github.com/Pocket-Kitten/index.html)
+Display random kitten pics; tap the screen to refresh and get an new one 💌
+
+[View it in action here](https://floflispull.github.io/Pocket-Kitten/)
