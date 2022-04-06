@@ -10,11 +10,7 @@ An OS! :) One that is completely open source and has been developed using the sa
 
 In this tutorial I want to take you over the basics of making an app. Wait, what? You already know some/a lot of HTML, CSS and Javascript? Then I hope you're ready to have your mind blown, because that is all you need!
 
-| ![OSpreview.jpg](./OSpreview.jpg) |
-
-|:--:|
-
-| <b>The Gaia operating system</b>|
+<p align="center"><img src="OSpreview.jpg"></p><p align="center">The Gaia operating system</p>
 
 ///////EDIT 'Geeksphone'
 ### I don't have a Firefox smartphone :( can I run it?
