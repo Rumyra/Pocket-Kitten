@@ -1,0 +1,76 @@
+body{margin:inherit;background:transparent}
+
+.wm-window{height:calc(100% - 2px)!important}
+
+#wm-content{overflow:auto;/* height:calc(100% - 34px)!important */height: calc(100% - 36px)!important}
+#wm-content object{width:100%;height:100%}
+
+.wm-window-title {
+    user-select: none;
+    -webkit-app-region: drag;
+	cursor: default;
+    height: 34px;
+    /* background: #00A2E8;
+    border-bottom: 1px solid #0094D2; */
+	background: #00a2e8;
+    border-bottom: 1px solid #0094d2
+}
+
+#window_title {
+    font-size: 16px;
+    line-height: 32px;
+    position: relative;
+    left: 5px;
+    color: #fff;
+	font-family: Calibri,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-weight: bold
+}
+
+#window_icon {
+	-webkit-app-region: no-drag;
+    position: relative;
+    left: 4px;
+    top: -1px
+}
+
+.wm-button-group {
+	-webkit-app-region: no-drag;
+    float: right;
+	margin-top: 3px;
+    margin-right: 3px
+}
+
+.wm-button {
+    height: 23px!important;
+    padding: 0px!important;
+    /* border: 1px solid #0094d2!important; */
+    border: none!important;
+    border-radius: 0px!important
+}
+/* .wm-button:hover{border:1px solid #082510!important} */
+.wm-button:active {
+	filter: none!important;
+    /* border: 1px solid #095533!important */
+}
+.wm-button:focus{outline:none!important}
+
+.wm-button.wm-minimize{width:33px!important}
+.wm-button.wm-maximize{width:33px!important}
+.wm-button.wm-close{width:34px!important}
+
+.wm-minimize{background:url(img/minimize.png)!important}
+.wm-minimize:hover{background-position-x:-33px!important}
+.wm-minimize:active{background-position-x:-66px!important}
+
+.wm-maximize{background:url(img/maximize.png)!important}
+.wm-maximize:hover{background-position-x:-33px!important}
+.wm-maximize:active{background-position-x:-66px!important}
+
+.wm-maximize.restore{background-position-y:-23px!important}
+
+.wm-close{background:url(img/close.png)!important}
+.wm-close:hover{background-position-x:-34px!important}
+.wm-close:active{background-position-x:-68px!important}
+
+.wm-window.framed{/*border-radius:10px;*//*border:1px solid #0094D2;*/border:1px solid #0094d2}
+.wm-window-title.framed{/*border-top-left-radius:10px;border-top-right-radius:10px*/}

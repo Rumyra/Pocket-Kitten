@@ -1,7 +1,7 @@
 Pocket-Kitten
 =============
 
-A simple Firefox OS app
+A simple Electron and Firefox OS app
 
 Display random kitten pics; tap the screen to refresh and get an new one 💌
 
